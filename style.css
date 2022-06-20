@@ -1,0 +1,93 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    overflow: hidden;
+}
+
+.container{
+    background: url("back.jpg");
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+}
+
+.scorecard{
+    position: absolute;
+    top: 2vh;
+    left: 10px;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.heading{
+    text-align: center;
+    position: relative;
+    top: 4vh;
+}
+
+.dino{
+    background-image: url("dinosaur.png");
+    background-size: cover;
+    width: 250px;
+    height: 200px;
+    position: absolute;
+    top: 46vh;
+
+}
+
+.obstacle{
+    background: url("obstacle.gif");
+    background-size: cover;
+    width: 170px;
+    height: 130px;
+    position: absolute;
+    top: 54vh;
+    right: 23vw;
+}
+
+.animatedino{
+    animation: jumpdino 0.7s linear;
+}
+
+.movedinoforward{
+    animation: moveright 0.6s linear;
+}
+
+.obstacleani{
+    animation: obstaclemove 5s linear infinite;
+}
+
+@keyframes jumpdino {
+    0%{
+        top: 46vh;
+    }
+
+    50%{
+        top:14vh
+    }
+
+    100%{
+        top:46vh
+    }
+    
+}
+
+@keyframes moveright {
+    100%{
+        left: 10vw;
+    }
+    
+}
+
+@keyframes obstaclemove {
+    0%{
+        right: -10vw;
+    }
+
+    100%{
+        right: 100vw;
+    }
+}
